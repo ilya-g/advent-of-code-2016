@@ -5,8 +5,7 @@ import day13.Move
 import day13.Move.*
 import day13.Pos
 import day13.next
-import day5.md5
-import day5.toHexString
+import common.md5.*
 import kotlin.coroutines.experimental.buildSequence
 
 data class State(val seed: String, val pos: Pos, val path: List<Move>)
@@ -17,7 +16,7 @@ fun State.openDoors(): Sequence<Pair<Move, State>> {
         append(seed)
         path.forEach { append(it.name) }
     }
-    val md5 = md5(str).toHexString()
+    val md5 = md5hex(str)
     return buildSequence {
         moves.forEachIndexed { index, move ->
             if (md5[index] in 'b'..'f') {

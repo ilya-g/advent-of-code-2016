@@ -1,14 +1,13 @@
 package day5
 
+import common.md5.*
+
 val input = "reyedfim"
 
-val md5 = java.security.MessageDigest.getInstance("MD5")
-fun md5(s: String) = md5.digest(s.toByteArray())
-fun ByteArray.toHexString() = joinToString("") { (it.toInt() and 0xFF).toString(16).padStart(2, '0') }
 
 fun hashes(seed: String): Sequence<String> =
         generateSequence(1, { it + 1 }).map {
-            md5(seed + it).toHexString()
+            md5hex(seed + it)
         }
 
 fun password(room: String) = run {

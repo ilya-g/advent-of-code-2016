@@ -1,19 +1,18 @@
 package day14
 
-import day5.md5
-import day5.toHexString
+import common.md5.*
 import java.util.*
 import kotlin.coroutines.experimental.buildSequence
 
 
 val regex3 = Regex("(.)\\1{2}")
 val regex5 = Regex("(.)\\1{4}")
-fun hashes(seed: String) = (0..Int.MAX_VALUE).asSequence().map { md5(seed + it).toHexString() }
+fun hashes(seed: String) = (0..Int.MAX_VALUE).asSequence().map { md5hex(seed + it) }
 
 fun Iterator<*>.iterate(n: Int) = repeat(n) { if (hasNext()) next() else return }
 inline fun <T> Queue<T>.pollIf(predicate: (T) -> Boolean): T? = peek()?.let { if (predicate(it)) poll() else null }
 tailrec fun md5stretch(input: String, count: Int): String {
-    val hash = md5(input).toHexString()
+    val hash = md5hex(input)
     return if (count > 1) md5stretch(hash, count - 1) else hash
 }
 
