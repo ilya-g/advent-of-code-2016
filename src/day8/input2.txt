@@ -1,0 +1,175 @@
+rect 1x1
+rotate row r=0 by 10
+rect 1x1
+rotate row r=0 by 10
+rect 1x1
+rotate row r=0 by 5
+rect 1x1
+rotate row r=0 by 3
+rect 2x1
+rotate row r=0 by 4
+rect 1x1
+rotate row r=0 by 3
+rect 1x1
+rotate row r=0 by 2
+rect 1x1
+rotate row r=0 by 3
+rect 2x1
+rotate row r=0 by 2
+rect 1x1
+rotate row r=0 by 3
+rect 2x1
+rotate row r=0 by 5
+rotate column c=0 by 1
+rect 4x1
+rotate row r=1 by 12
+rotate row r=0 by 10
+rotate column c=0 by 1
+rect 9x1
+rotate column c=7 by 1
+rotate row r=1 by 3
+rotate row r=0 by 2
+rect 1x2
+rotate row r=1 by 3
+rotate row r=0 by 1
+rect 1x3
+rotate column c=35 by 1
+rotate column c=5 by 2
+rotate row r=2 by 5
+rotate row r=1 by 5
+rotate row r=0 by 2
+rect 1x3
+rotate row r=2 by 8
+rotate row r=1 by 10
+rotate row r=0 by 5
+rotate column c=5 by 1
+rotate column c=0 by 1
+rect 6x1
+rotate row r=2 by 7
+rotate row r=0 by 5
+rotate column c=0 by 1
+rect 4x1
+rotate column c=40 by 2
+rotate row r=2 by 10
+rotate row r=0 by 12
+rotate column c=5 by 1
+rotate column c=0 by 1
+rect 9x1
+rotate column c=43 by 1
+rotate column c=40 by 2
+rotate column c=38 by 1
+rotate column c=15 by 1
+rotate row r=3 by 35
+rotate row r=2 by 35
+rotate row r=1 by 32
+rotate row r=0 by 40
+rotate column c=32 by 1
+rotate column c=29 by 1
+rotate column c=27 by 1
+rotate column c=25 by 1
+rotate column c=23 by 2
+rotate column c=22 by 1
+rotate column c=21 by 3
+rotate column c=20 by 1
+rotate column c=18 by 3
+rotate column c=17 by 1
+rotate column c=15 by 1
+rotate column c=14 by 1
+rotate column c=12 by 1
+rotate column c=11 by 3
+rotate column c=10 by 1
+rotate column c=9 by 1
+rotate column c=8 by 2
+rotate column c=7 by 1
+rotate column c=4 by 1
+rotate column c=3 by 1
+rotate column c=2 by 1
+rotate column c=0 by 1
+rect 34x1
+rotate column c=44 by 1
+rotate column c=24 by 1
+rotate column c=19 by 1
+rotate row r=1 by 8
+rotate row r=0 by 10
+rotate column c=8 by 1
+rotate column c=7 by 1
+rotate column c=6 by 1
+rotate column c=5 by 2
+rotate column c=3 by 1
+rotate column c=2 by 1
+rotate column c=1 by 1
+rotate column c=0 by 1
+rect 9x1
+rotate row r=0 by 40
+rotate column c=43 by 1
+rotate row r=4 by 10
+rotate row r=3 by 10
+rotate row r=2 by 5
+rotate row r=1 by 10
+rotate row r=0 by 15
+rotate column c=7 by 2
+rotate column c=6 by 3
+rotate column c=5 by 2
+rotate column c=3 by 2
+rotate column c=2 by 4
+rotate column c=0 by 2
+rect 9x2
+rotate row r=3 by 47
+rotate row r=0 by 10
+rotate column c=42 by 3
+rotate column c=39 by 4
+rotate column c=34 by 3
+rotate column c=32 by 3
+rotate column c=29 by 3
+rotate column c=22 by 3
+rotate column c=19 by 3
+rotate column c=14 by 4
+rotate column c=4 by 3
+rotate row r=4 by 3
+rotate row r=3 by 8
+rotate row r=1 by 5
+rotate column c=2 by 3
+rotate column c=1 by 3
+rotate column c=0 by 2
+rect 3x2
+rotate row r=4 by 8
+rotate column c=45 by 1
+rotate column c=40 by 5
+rotate column c=26 by 3
+rotate column c=25 by 5
+rotate column c=15 by 5
+rotate column c=10 by 5
+rotate column c=7 by 5
+rotate row r=5 by 35
+rotate row r=4 by 42
+rotate row r=2 by 5
+rotate row r=1 by 20
+rotate row r=0 by 45
+rotate column c=48 by 5
+rotate column c=47 by 5
+rotate column c=46 by 5
+rotate column c=43 by 5
+rotate column c=41 by 5
+rotate column c=38 by 5
+rotate column c=37 by 5
+rotate column c=36 by 5
+rotate column c=33 by 1
+rotate column c=32 by 5
+rotate column c=31 by 5
+rotate column c=30 by 1
+rotate column c=28 by 5
+rotate column c=27 by 5
+rotate column c=26 by 5
+rotate column c=23 by 1
+rotate column c=22 by 5
+rotate column c=21 by 5
+rotate column c=20 by 1
+rotate column c=17 by 5
+rotate column c=16 by 5
+rotate column c=13 by 1
+rotate column c=12 by 3
+rotate column c=7 by 5
+rotate column c=6 by 5
+rotate column c=3 by 1
+rotate column c=2 by 3
+

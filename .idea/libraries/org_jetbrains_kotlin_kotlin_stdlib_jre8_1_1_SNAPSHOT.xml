@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1-SNAPSHOT" type="repository">
+    <properties maven-id="org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1-SNAPSHOT" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jre8/1.1-SNAPSHOT/kotlin-stdlib-jre8-1.1-SNAPSHOT.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jre7/1.1-SNAPSHOT/kotlin-stdlib-jre7-1.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
