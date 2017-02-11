@@ -50,15 +50,3 @@ infix fun LongRange.overlaps(other: LongRange) = this.start <= other.endInclusiv
 infix fun LongRange.conjoins(other: LongRange) = other.start == this.endInclusive + 1
 
 
-fun addExclusion(allowed: List<LongRange>): Sequence<LongRange> {
-    val result = mutableListOf<List<LongRange>>()
-    for (r in allowed) {
-
-    }
-    TODO()
-}
-
-fun LongRange.exclude(other: LongRange): Sequence<LongRange> {
-TODO()
-}
-

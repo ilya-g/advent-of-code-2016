@@ -4,11 +4,6 @@ import kotlin.reflect.KProperty
 
 val input = File("src/day9/input2.txt").readText()
 
-//class X {
-//    val p1: Int = 0
-//    val p2: Int? = null
-//    val p3: java.lang.Integer? = null
-//}
 
 fun main(args: Array<String>) {
 

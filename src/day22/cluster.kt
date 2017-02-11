@@ -57,21 +57,13 @@ fun main(args: Array<String>) {
 
     val free = nodeMap.entries.single { it.value == NodeState.EMPTY }.key
 
+    // ad-hoc solution for the given cluster layout
     val sx = mx + 1
     val steps1 = (sx - 1) + 5 * (sx - 2)
     println(steps1)
     val steps2 = free.x + free.y
     println(steps2)
     println(steps1 + steps2)
-}
-
-internal class X {
-    fun foo() {
-        var b: Byte = 1
-        val i: Int = b as Int
-        b as Char
-        b = i.toByte()
-    }
 }
 
 
