@@ -11,10 +11,13 @@ fun trapsAfter(traps: String) = buildString {
 fun trapAfter(l: Char, c: Char, r: Char): Char =
         if (l != r && (l == c || r == c)) '^' else '.'
 
+fun Sequence<String>.safeTileCount(): Int = sumBy { it.count { c -> c == '.' } }
+
 fun main(args: Array<String>) {
     val input = "^.^^^..^^...^.^..^^^^^.....^...^^^..^^^^.^^.^^^^^^^^.^^.^^^^...^^...^^^^.^.^..^^..^..^.^^.^.^......."
-    val rows = generateSequence(input, ::trapsAfter).take(400000)
-    // rows.toList().forEach(::println)
 
-    println(rows.sumBy { it.count { c -> c == '.' } })
+    val rows = generateSequence(input, ::trapsAfter)
+    println(rows.take(40).onEach(::println).safeTileCount())
+
+    println(rows.take(400000).safeTileCount())
 }
