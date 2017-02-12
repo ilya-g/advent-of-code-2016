@@ -1,13 +1,9 @@
 package day22
 
+import common.positionXY.*
 import java.io.File
 
 val input = File("src/day22/input.txt").readLines()
-
-
-data class Pos(val x: Int, val y: Int) {
-    override fun toString() = "($x,$y)"
-}
 
 data class Node(val pos: Pos, val size: Int, val used: Int) {
     val avail = size - used

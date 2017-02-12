@@ -1,5 +1,7 @@
 package day1
 
+import common.positionXY.*
+
 fun main(args: Array<String>) {
     println(distanceOf("R2, R2, R2"))
     println(distanceOf("R5, L5, R5, R3"))
@@ -49,7 +51,6 @@ fun distanceOfFirstRecurring(input: String): Int {
     error("No pos visited twice")
 }
 
-data class Pos(val x: Int, val y: Int)
 fun Pos.distance() = Math.abs(x) + Math.abs(y)
 
 enum class Direction(val dx: Int, val dy: Int) {

@@ -2,10 +2,10 @@ package day24
 
 
 import day11.BfsSolver
-import day2.Pos
 import java.io.File
 import kotlin.coroutines.experimental.buildSequence
 import kotlin.system.measureNanoTime
+import common.positionRC.*
 
 val input = File("src/day24/map.txt").readLines()
 
@@ -47,14 +47,12 @@ class DuctMap(val rows: Int, val cols: Int, init: (r: Int, c: Int) -> Cell) {
 
 
 
-val deltas = listOf(-1 to 0, 1 to 0, 0 to -1, 0 to 1)
 fun DuctMap.findDistances(): Map<Pair<Stop, Stop>, Int> {
     fun nextPos(pos: Pos) = buildSequence {
         val (r, c) = pos
-        for (move in deltas) {
-            val (dr, dc) = move
-            val r1 = r + dr
-            val c1 = c + dc
+        for (move in Move.values) {
+            val r1 = r + move.dr
+            val c1 = c + move.dc
             if (r1 in 0..rows - 1 && c1 in 0..cols - 1 && get(r1, c1) != Cell.Wall) yield(move to Pos(r1, c1))
         }
     }

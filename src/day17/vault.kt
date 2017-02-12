@@ -1,16 +1,15 @@
 package day17
 
 import day11.BfsSolver
-import day13.Move
-import day13.Move.*
-import day13.Pos
-import day13.next
+
 import common.md5.*
+import common.positionRC.*
+import common.positionRC.Move.*
 import kotlin.coroutines.experimental.buildSequence
 
 data class State(val seed: String, val pos: Pos, val path: List<Move>)
 
-val moves = listOf(U, D, L, R)
+val moves = listOf(U, D, L, R) // order matters
 fun State.openDoors(): Sequence<Pair<Move, State>> {
     val str = buildString(seed.length + path.size) {
         append(seed)
@@ -20,7 +19,7 @@ fun State.openDoors(): Sequence<Pair<Move, State>> {
     return buildSequence {
         moves.forEachIndexed { index, move ->
             if (md5[index] in 'b'..'f') {
-                val nextPos = pos.next(move)
+                val nextPos = pos.moveIn(move)
                 if (nextPos.r in 0..3 && nextPos.c in 0..3)
                     yield(move to copy(pos = nextPos, path = path + move))
             }
