@@ -1,10 +1,7 @@
 package day25
 
-import day12.OpCode
-import day12.Reg
-import day12.execute
-import day12.parse
-import kotlin.coroutines.experimental.buildSequence
+import common.assembunny.*
+
 
 val input = """
 cpy a d

@@ -1,6 +1,6 @@
 package day23
 
-import day12.*
+import common.assembunny.*
 
 val input = """
 cpy a b
@@ -32,12 +32,10 @@ jnz c -5
 """.lines().filter { it.isNotEmpty() }
 
 fun main(args: Array<String>) {
-
-
     val program = input.map(::parse)
     println(program.joinToString("\n"))
-//    val state = Reg.values().associate { it to 0 }
-//    println(execute(program, state))
+    val state = Reg.values().associate { it to 0 } + (Reg.a to 7)
+    println(execute(program, state))
     val state2 = Reg.values().associate { it to 0 } + (Reg.a to 12)
     println(execute(program, state2))
 }
