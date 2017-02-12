@@ -37,7 +37,7 @@ jnz 1 -21
 """.lines().filter { it.isNotEmpty() }
 
 sealed class ProgramTerminationException : Exception() {
-    class Success : ProgramTerminationException()
+    class Enough : ProgramTerminationException()
     class FailAt(val iteration: Int, val value: Int) : ProgramTerminationException()
 }
 
@@ -53,21 +53,21 @@ fun main(args: Array<String>) {
         var iteration = 0
         try {
             execute(program, state) { value ->
-                if (iteration >= iterations) throw ProgramTerminationException.Success()
+                if (iteration >= iterations) throw ProgramTerminationException.Enough()
                 if (!verifySequence(iteration, value)) throw ProgramTerminationException.FailAt(iteration, value)
                 print(value)
                 iteration++
             }
         }
         catch(e: ProgramTerminationException.FailAt) {
-            println(" - Failed at ${e.iteration} with ${e.value}")
+            println("${e.value} - failed at iteration ${e.iteration}")
             return false
         }
-        catch (e: ProgramTerminationException.Success) {
+        catch (e: ProgramTerminationException.Enough) {
             println(" - success")
             return true
         }
-        println(" - termintated")
+        println(" - terminated preliminary")
         return false
     }
 
