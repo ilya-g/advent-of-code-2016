@@ -1,5 +1,6 @@
 package day11
 
+import common.bfs.BfsSolver
 import day11.Elements.*
 import kotlin.coroutines.experimental.buildSequence
 import kotlin.system.measureNanoTime

@@ -1,7 +1,7 @@
 package day24
 
 
-import day11.BfsSolver
+import common.bfs.BfsSolver
 import java.io.File
 import kotlin.coroutines.experimental.buildSequence
 import kotlin.system.measureNanoTime
@@ -60,7 +60,7 @@ fun DuctMap.findDistances(): Map<Pair<Stop, Stop>, Int> {
     val results = mutableMapOf<Pair<Stop, Stop>, Int>()
     fun distancesFrom(start: Stop): Sequence<Pair<Pair<Stop, Stop>, Int>> {
         val startPos = locations[start]!!
-        val solver = BfsSolver(::nextPos, { it != startPos && get(it) is Cell.Point }, { it }, walkOverSolution = true).apply { quiet = true }
+        val solver = BfsSolver(::nextPos, { it != startPos && get(it) is Cell.Point }, walkOverSolution = true).apply { quiet = true }
         return solver.solveAll(startPos).map { s ->
             val (_, endPos) = s.last()
             val endCell = get(endPos) as Cell.Point

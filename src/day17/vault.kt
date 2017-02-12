@@ -1,7 +1,7 @@
 package day17
 
-import day11.BfsSolver
 
+import common.bfs.BfsSolver
 import common.md5.*
 import common.positionRC.*
 import common.positionRC.Move.*
@@ -42,7 +42,7 @@ class CountingSet<T> : AbstractMutableSet<T>() {
 fun main(args: Array<String>) {
     val initial = Pos(0, 0)
     val target = Pos(3, 3)
-    val solver = BfsSolver(State::openDoors, { it.pos == target }, { it }, CountingSet())
+    val solver = BfsSolver(State::openDoors, { it.pos == target }, CountingSet())
     val solutions = solver.solveAll(State("hhhxzeay", initial, emptyList()))
             .onEach { println("Path: ${it.joinToString("") { (move) -> move.name }}") }
             .toList()

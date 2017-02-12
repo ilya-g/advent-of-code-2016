@@ -1,6 +1,6 @@
 package day13
 
-import day11.BfsSolver
+import common.bfs.BfsSolver
 import common.positionRC.*
 
 class Maze(val seed: Int) {
@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
 
     val initial = Pos(c = 1, r = 1)
     val target = Pos(c = 31, r = 39)
-    val solver = BfsSolver(::nextMoves, { it == target }, { it })
+    val solver = BfsSolver(::nextMoves, { it == target })
     val moves = solver.solve(initial)!!
     println(moves.size)
     val lines = maze.lines(50, 45)

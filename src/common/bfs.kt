@@ -1,9 +1,11 @@
-package day11
+package common.bfs
 
-import day11.LList.*
+import common.bfs.LList.*
 import java.util.*
 import kotlin.coroutines.experimental.buildSequence
 
+fun <T, M> BfsSolver(next: (T) -> Sequence<Pair<M, T>>, isSolved: (T) -> Boolean, visited: MutableSet<T> = mutableSetOf(), walkOverSolution: Boolean = false) =
+        BfsSolver(next, isSolved, { it }, visited, walkOverSolution)
 
 class BfsSolver<T, M, S>(val next: (T) -> Sequence<Pair<M, T>>, val isSolved: (T) -> Boolean, val compress: (T) -> S, val visited: MutableSet<S> = mutableSetOf(), val walkOverSolution: Boolean = false) {
     private data class StateWithPath<out M, out T>(val state: T, val path: LList<Pair<M, T>>)
