@@ -14,12 +14,12 @@ tailrec fun md5stretch(input: String, count: Int): String {
     return if (count > 1) md5stretch(hash, count - 1) else hash
 }
 
-fun keyIndices(seed: String) = buildSequence<Int> {
+fun keyIndices(seed: String, keyStretchCount: Int) = buildSequence<Int> {
     val match3At = ArrayDeque<Pair<Int, Char>>()
     val match5At = ArrayDeque<Pair<Int, List<Char>>>()
     var generateIndex = 0
     fun generate() {
-        val hash = md5stretch(seed + generateIndex, 2017)
+        val hash = md5stretch(seed + generateIndex, keyStretchCount)
         val tripleMatch = regex3.find(hash)
         if (tripleMatch != null) {
             match3At.offer(generateIndex to tripleMatch.groupValues[0][1])
@@ -43,8 +43,11 @@ fun keyIndices(seed: String) = buildSequence<Int> {
 }
 
 fun main(args: Array<String>) {
-    val indices = keyIndices("qzyelonm")
-    indices.take(64).forEach {
-        println(it)
-    }
+    val seed = "qzyelonm"
+    val indices = keyIndices(seed, 1)
+    indices.take(64).forEach(::println)
+
+    println("-----------")
+    val indices2 = keyIndices(seed, 2017)
+    indices2.take(64).forEach(::println)
 }
